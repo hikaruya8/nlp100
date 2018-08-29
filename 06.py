@@ -17,7 +17,11 @@ def bi_gram(x, y):
 
 bi_gram(X, Y)
 
-print('和集合:{}'.format(X | Y))
+X = set(X)
+Y = set(Y)
 
+print('和集合:{}'.format(X | Y))
+print('積集合:{}'.format(X & Y))
+print('差集合:{}'.format(X ^ Y))
 
 
