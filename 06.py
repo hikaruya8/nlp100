@@ -9,19 +9,32 @@ Y = []
 
 bigram1 = nltk.ngrams(word1, 2)
 bigram2 = nltk.ngrams(word2, 2)
-def bi_gram(x, y):
-  for b1, b2 in zip(bigram1, bigram2):
+
+
+def bigram_x(x):
+  for b1 in bigram1:
     x.append(b1)
+  return x
+
+def bigram_y(y):
+  for b2 in bigram2:
     y.append(b2)
-  return x, y
+  return y
 
-bi_gram(X, Y)
+bigram_x(X)
+bigram_y(Y)
 
-X = set(X)
-Y = set(Y)
+X1 = set(X) #集合は辞書型にしなければならない
+Y1 = set(Y)
 
-print('和集合:{}'.format(X | Y))
-print('積集合:{}'.format(X & Y))
-print('差集合:{}'.format(X ^ Y))
+print('X:{}'.format(X1))
+print('Y:{}'.format(Y1))
+print('和集合:{}'.format(X1 | Y1))
+print('積集合:{}'.format(X1 & Y1))
+print('差集合:{}'.format(X1 ^ Y1))
+
+# {1, 3} <= {1, 2, 3}
+print('seがXに含まれる:{}'.format({('s', 'e')} <= X1))
+print('seがYに含まれる:{}'.format({('s', 'e')} <= Y1))
 
 
