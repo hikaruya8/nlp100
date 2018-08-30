@@ -10,16 +10,13 @@ def typoglycemia(document):
   doc_tokens = nltk.word_tokenize(doc)
   for t in doc_tokens:
     if len(t) <= 4: #単語の長さが４文字以下の場合そのまま出力
-      result += t
-    else:           #単語の長さが５以上ならば
-      print(t)
-      # for a in t:
-      #   t += random.shuffle(a)
-      # result += t
-      # result += t[0] + random.shuffle(t[1:-1])+ t[-1] #先頭と末尾の文字は残し，それ以外の文字の順序をランダムに並び替える
+      result += ' ' + t
+    else:           #単語の長さが５以上ならば先頭と末尾の文字は残し，それ以外の文字の順序をランダムに並び替える
+      sr = ''.join(random.sample(t[1:-1], len(t[1:-1])))
+      result += ' ' + (t[0] + sr + t[-1])
+  return result
 
-
-document = "I couldn't believe that I could actually understand what I was reading : the phenomenal power of the human mind ."
-typoglycemia(document)
+document = input("文字列を入力してください->")
+print(typoglycemia(document))
 
 
