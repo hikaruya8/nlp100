@@ -4,16 +4,29 @@
 # 英小文字ならば(219 - 文字コード)の文字に置換
 # その他の文字はそのまま出力
 # この関数を用い，英語のメッセージを暗号化・復号化せよ
-result = ''
 
-def chiper(target):
+def cipher(target):
+  result = ''
+  
   for t in target:
     if t.islower():
-      result = chr(219 - ord(t))
+      result += chr(219 - ord(t))
 
     else:
-      result = t
+      result += t
   return result
 
-target = input('文字列を入力してください')
-chiper(target)
+# 対象文字列の入力
+target = input('文字列を入力してください--> ')
+
+# 暗号化
+result = cipher(target)
+print('暗号化:' + result)
+
+# 復号化
+result2 = cipher(result)
+print('復号化:' + result2)
+
+# 復号化で元に戻っているかチェック
+if result2 != target:
+    print('元に戻っていない！？')
