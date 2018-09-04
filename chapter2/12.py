@@ -21,16 +21,29 @@ l1 = col1
 l2 = col2
 
 with open(path_w1, mode='w') as f:
-    f.writelines(l1)
+    f.write('\n'.join(l1))
 
 with open(path_w1) as f:
     print(f.read())
 
 with open(path_w2, mode='w') as g:
-    g.writelines(l2)
+    g.write('\n'.join(l2))
 
 with open(path_w2) as g:
     print(g.read())
+
+
+# with open(path_w1, mode='w') as f:
+#     f.writelines(l1)
+
+# with open(path_w1) as f:
+#     print(f.read())
+
+# with open(path_w2, mode='w') as g:
+#     g.writelines(l2)
+
+# with open(path_w2) as g:
+#     print(g.read())
 
 # with open(path_w, mode='w') as f:
 #     f.write(s)
