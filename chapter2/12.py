@@ -7,6 +7,8 @@ import numpy as np #numpyで2次元配列にする
 f = open('hightemp.txt')
 document = f.read()
 doc_token = nltk.word_tokenize(document)
+doc_2d = np.array(doc_token).reshape((24,4))
+print(doc_2d)
 
 # def tab_space(document):
 #   d_list = ''
@@ -15,14 +17,14 @@ doc_token = nltk.word_tokenize(document)
 #     d_list += d
 #   return d_list
 
-def split_row(document):
-  d_list = []
-  for d in document:
-    d_list += d
-  return d_list
+# def split_row(document):
+#   d_list = []
+#   for d in document:
+#     d_list += d
+#   return d_list
 
 
-print(split_row(document))
+# print(split_row(document))
 
 
 
