@@ -33,36 +33,5 @@ with open(path_w2) as g:
     print(g.read())
 
 
-# with open(path_w1, mode='w') as f:
-#     f.writelines(l1)
-
-# with open(path_w1) as f:
-#     print(f.read())
-
-# with open(path_w2, mode='w') as g:
-#     g.writelines(l2)
-
-# with open(path_w2) as g:
-#     print(g.read())
-
-# with open(path_w, mode='w') as f:
-#     f.write(s)
-# with open(path_w) as f:
-#     print(f.read())
-
-# New file
-
-# print(f)
-# print(col2_txt)
-# def split_row(document):
-#   d_list = []
-#   for d in document:
-#     d_list += d
-#   return d_list
-
-
-# print(split_row(document))
-
-
 
 
