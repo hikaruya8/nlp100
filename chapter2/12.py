@@ -9,17 +9,33 @@ document = f.read()
 doc_token = nltk.word_tokenize(document)
 doc_2d = np.array(doc_token).reshape((24,4)) #24行4列 ndarrayにする
 
-col1_txt = doc_2d[:,0] #各行の1列目だけを抜き出したもの
-col2_txt = doc_2d[:,1] #各行の1列目だけを抜き出したもの
+col1 = doc_2d[:,0] #各行の1列目だけを抜き出したもの
+col2 = doc_2d[:,1] #各行の1列目だけを抜き出したもの
 
 
-path_w = '/Users/yamadahikaru/Projects/ML_Projects_Python/nlp100/chapter2/12.py'
-s = 'col1_txt'
+path_w1 = '/Users/yamadahikaru/Projects/ML_Projects_Python/nlp100/chapter2/col1.txt'
+path_w2 = '/Users/yamadahikaru/Projects/ML_Projects_Python/nlp100/chapter2/col2.txt'
 
-with open(path_w, mode='w') as f:
-    f.write(s)
-with open(path_w) as f:
+
+l1 = col1
+l2 = col2
+
+with open(path_w1, mode='w') as f:
+    f.writelines(l1)
+
+with open(path_w1) as f:
     print(f.read())
+
+with open(path_w2, mode='w') as g:
+    g.writelines(l2)
+
+with open(path_w2) as g:
+    print(g.read())
+
+# with open(path_w, mode='w') as f:
+#     f.write(s)
+# with open(path_w) as f:
+#     print(f.read())
 
 # New file
 
