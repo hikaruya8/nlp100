@@ -18,12 +18,13 @@ s = 'col1_txt'
 
 with open(path_w, mode='w') as f:
     f.write(s)
-
+with open(path_w) as f:
+    print(f.read())
 
 # New file
 
-print(f)
-print(col2_txt)
+# print(f)
+# print(col2_txt)
 # def split_row(document):
 #   d_list = []
 #   for d in document:
