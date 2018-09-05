@@ -1,4 +1,4 @@
-# Natural Language Processing 100 questions (言語処理100本ノック 2015)
+# Natural Language Processing 100 questions
 
 Practice Natural Language Processing by 100 questions of Naoaki Okazaki, Inui-Okazaki Laboratory in Tohoku University (http://www.cl.ecei.tohoku.ac.jp/).
 
