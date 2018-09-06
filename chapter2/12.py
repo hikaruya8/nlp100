@@ -13,8 +13,7 @@ col1 = doc_2d[:,0] #各行の1列目だけを抜き出したもの
 col2 = doc_2d[:,1] #各行の1列目だけを抜き出したもの
 
 
-path_w1 = '/Users/yamadahikaru/Projects/ML_Projects_Python/nlp100/chapter2/col1.txt'
-path_w2 = '/Users/yamadahikaru/Projects/ML_Projects_Python/nlp100/chapter2/col2.txt'
+path_w = '/Users/yamadahikaru/Projects/ML_Projects_Python/nlp100/chapter2/row_n.txt'
 
 
 l1 = col1
