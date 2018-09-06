@@ -19,7 +19,7 @@ def make_col_n(n):
   l = row_n
 
   with open(path_w, mode='w') as f:
-    f.write('\n'.join(l))
+    f.write(' '.join(l))
 
   with open(path_w) as f:
     print(f.read())
