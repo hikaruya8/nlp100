@@ -3,13 +3,13 @@
 
 import pandas as pd
 
-def main():
+def split_n(n):
     df = pd.read_csv('hightemp.txt', header=None)
-    df.to_csv('split_n.csv', header=False, index=False, columns=range(0, 4))
-    df.to_csv('iris_target_train.csv', header=False, index=False, columns=range(4, 5))
+    df.to_csv('split_n.txt', header=False, index=False, columns=range(0, int(n)))
 
-if __name__ == '__main__':
-    main()
+n = input("自然数(半角数字)を入力してください: ")
+split_n(n)
+
 # def split_n_file(n):
 #   f = open('hightemp.txt')
 #   document = f.read()
