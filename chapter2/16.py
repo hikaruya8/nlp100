@@ -5,7 +5,7 @@ import pandas as pd
 
 def split_n(n):
     df = pd.read_csv('hightemp.txt', header=None)
-    df.to_csv('split_n.txt', header=False, index=False, columns=range(0, int(n)))
+    df.to_csv('split_n.csv', header=False, index=False, columns=range(int(n), 4))
 
 n = input("自然数(半角数字)を入力してください: ")
 split_n(n)
