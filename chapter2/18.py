@@ -9,6 +9,6 @@ def sort_row3():
   document = f.read()
   doc_token = nltk.word_tokenize(document)
   doc_2d = np.array(doc_token).reshape((24,4)) #24行4列 ndarrayにする
-  print(doc_2d[:, doc_2d[2].argsort(axis=0, kind='quicksort')][::-1])
+  print(doc_2d[:, doc_2d[2].argsort(axis=0, kind='quicksort')[::-1]][::-1])
 
 sort_row3()
