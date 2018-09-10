@@ -12,12 +12,8 @@ def count_row1():
   doc_2d = np.array(doc_token).reshape((24,4)) #24行4列 ndarrayにする
 
   unique, counts = np.unique(doc_2d[0:, 0], return_counts=True)
-  print(np.asarray((unique, counts)).T)
-
-  # doc_list2d = doc_2d.tolist()
-  # for d in doc_list2d:
-  #   counter = Counter(d[0])
-
-    # print(counter)
+  count_pre = np.asarray((unique, counts)).T
+  print(count_pre[count_pre[:,1].argsort(), :][::-1]) #先頭の列でソート+降順
 
 count_row1()
+
