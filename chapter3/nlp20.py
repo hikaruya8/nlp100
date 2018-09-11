@@ -4,9 +4,12 @@
 import gzip
 import json
 
-with gzip.open('jawiki-country.json.gz', 'rt') as data:
-  for line in data:
-    data_json = json.loads(line)
-    if data_json['title'] == 'イギリス':
-      print(data_json['text'])
-      break
+def read_json(read_key):
+  with gzip.open('jawiki-country.json.gz', 'rt') as data:
+    for line in data:
+      data_json = json.loads(line)
+      if data_json['title'] == 'イギリス':
+        return data_json[read_key]
+        break
+
+read_json('text')
