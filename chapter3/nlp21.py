@@ -7,7 +7,7 @@ import numpy as np
 import json
 
 data = pd.read_json('/Users/yamadahikaru/Projects/ML_Projects_Python/nlp100/chapter3/jawiki-country.json.gz', lines=True)
-print(data)
+print(data['']) #pandas.read_jsonのオプションを読む
 # data_pd = pd.data
 # if data.pd.isin([Category]):
 #   print("ok")
