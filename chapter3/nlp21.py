@@ -7,7 +7,8 @@ import numpy as np
 import json
 
 data = pd.read_json('/Users/yamadahikaru/Projects/ML_Projects_Python/nlp100/chapter3/jawiki-country.json.gz', lines=True)
-Category_row = data.loc[:, 'text':'Category']#pandas.read_jsonのオプションを読む
+rown = data.text.loc[1]#pandas.read_jsonのオプションを読む
+Category_row = rown.loc[Category:オーストリア|*]
 
 print(Category_row)
 
