@@ -4,7 +4,7 @@
 import gzip
 import json
 
-def read_json(read_key):
+def read_uk(read_key):
   with gzip.open('jawiki-country.json.gz', 'rt') as data:
     for line in data:
       data_json = json.loads(line)
@@ -12,4 +12,4 @@ def read_json(read_key):
         return data_json[read_key]
         break
 
-read_json('text')
+# read_uk('text')
