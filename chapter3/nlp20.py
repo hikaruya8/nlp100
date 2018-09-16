@@ -12,4 +12,4 @@ def read_uk(read_key):
         return data_json[read_key]
         break
 
-# read_uk('text')
+print(read_uk('text'))
