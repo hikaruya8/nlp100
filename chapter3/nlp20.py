@@ -3,7 +3,6 @@
 
 import gzip
 import json
-import re
 
 def read_uk(read_key):
   with gzip.open('jawiki-country.json.gz', 'rt') as data:
