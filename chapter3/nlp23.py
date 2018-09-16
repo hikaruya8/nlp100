@@ -18,7 +18,10 @@ pattern = re.compile(r'''
 
 
 result = pattern.findall(data_uk)
+print(result)
 
-for line in data_uk:
-  level = len(line[0]) # '='の数-1
-  print('{indent},{sect},{level}'.format(indent=('\t' * (level - 1)), sect=line[1], level=level))
+# 結果表示
+for line in result:
+    level = len(line[0]) - 1    # '='の数-1
+    print('{indent}{sect}({level})'.format(
+        indent='\t' * (level - 1), sect=line[1], level=level))
