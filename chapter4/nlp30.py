@@ -34,7 +34,9 @@ def neko_lines():
         raise StopIteration #区切りがない場合終了
       res_cols = cols[1].split(',')
 
-      #辞書を作成し、辞書に追加
+      #辞書を作成し、辞書に追加 詳細は表層形\t品詞,品詞細分類1,品詞細分類2,品詞細分類3,活用型,活用形,原形,読み,発音
+      #http://taku910.github.io/mecab/#format
+      
       morpheme = {
         'surface': cols[0],
         'base': res_cols[6],
