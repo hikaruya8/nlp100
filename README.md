@@ -23,8 +23,8 @@ NLP 100 quetions [言語処理100本ノック](http://www.cl.ecei.tohoku.ac.jp/n
 をデータとして使用
 
 #### chapter4:
-夏目漱石の小説『吾輩は猫である』の文章 [neko.txt](http://www.cl.ecei.tohoku.ac.jp/nlp100/data/neko.txt
-使用)
+夏目漱石の小説『吾輩は猫である』の文章 [neko.txt](http://www.cl.ecei.tohoku.ac.jp/nlp100/data/neko.txt)
+使用
 requirment:
 [MeCab](http://taku910.github.io/mecab/#usage-tools),
 [matplotlib](https://matplotlib.org/)
