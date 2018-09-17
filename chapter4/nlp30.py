@@ -50,11 +50,11 @@ def neko_lines():
         yield morphemes
         morphemes = []
 
-# 形態素解析
-parse_neko()
+# # 形態素解析
+# parse_neko()
 
-# 1文ずつ辞書のリストを作成
-lines = neko_lines()
-for line in lines:
-    print(line)
+# # 1文ずつ辞書のリストを作成
+# lines = neko_lines()
+# for line in lines:
+#     print(line)
 
