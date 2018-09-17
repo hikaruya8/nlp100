@@ -7,7 +7,7 @@ I sometimes use API like NLTK, so it may not be followed basic.
 
 
 乾・鈴木研究室の言語処理100本ノックをやっていきます。
-[NLTK][https://www.nltk.org/]などのライブラリもけっこう使ってるので基本とは少し違うかもしれません。
+[NLTK](https://www.nltk.org/)などのライブラリもけっこう使ってるので基本とは少し違うかもしれません。
 
 またわからないときには@segavvyさんの[素人の言語処理100本ノック:まとめ](https://qiita.com/segavvy/items/fb50ba8097d59475f760)を参考にさせていただいています。
 
