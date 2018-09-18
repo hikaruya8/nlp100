@@ -28,7 +28,7 @@ def neko_lines():
   with open(fname_parsed) as file_parsed:
     morphemes = []
     for line in file_parsed:
-      #表層家はtabで区切る、それ以外は','で区切る
+      #表層形はtabで区切る、それ以外は','で区切る
       cols = line.split('\t')
       if len(cols) < 2:
         raise StopIteration #区切りがない場合終了
@@ -47,7 +47,7 @@ def neko_lines():
 
       # 品詞細分類1が'句点'なら文の終わりと判定
       if res_cols[1] == '句点':
-        yield morphemes
+        yield morphemes #大きいデータはreturnで一度に引き渡すのではなく、yeildで少量ずつ読み込む
         morphemes = []
 
 # # 形態素解析
