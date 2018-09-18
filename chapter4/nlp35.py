@@ -5,16 +5,20 @@ import nlp30
 
 lines = nlp30.neko_lines()
 
-list_articulated_nouns = []
-list_nouns = []
+list_series_noun = []
 
 for line in lines:
-  if len(line) > 1:
-    for i in range(1, len(line)-1):
-      if line[i]['pos'] == '名詞' \
-      and line[i+1]['pos'] == '名詞':
-        list_articulated_nouns.append(line[i]['surface'])
-      elif line[i]['pos'] == None:
-        break
+  nouns = []
+  for morpheme in line:
+    if morpheme['pos'] == '名詞':
+      nouns.append(morpheme['surface'])
+    else:
+      if len(nouns) > 1:
+        list_series_noun.append("".join(nouns))
+        nouns = []
+  if len(nouns) > 1:
+    list_series_noun.append("".join(nouns))
 
-print(list_articulated_nouns)
+series_noun = set(list_series_noun)
+
+print(sorted(series_noun, key=list_series_noun.index))
