@@ -15,5 +15,5 @@ def line_common_words():
 
   common_words = word_count.most_common()
 
-  yield common_words
+  return common_words
 
