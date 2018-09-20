@@ -17,5 +17,6 @@ for i, line in enumerate(line_common_words):
 x = np.array(ten_common_words)[0:,0]
 y = np.array(ten_common_words)[0:,1]
 
-plt.plot(x, y, label="test")
+plt.bar(x, y, label="test")
+plt.show()
 
