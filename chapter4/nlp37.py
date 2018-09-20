@@ -7,9 +7,14 @@ import numpy as np
 
 line_common_words = nlp36.line_common_words()
 
+ten_common_words = []
 for i, line in enumerate(line_common_words):
   if i < 10:
-    print(i, line)
+    ten_common_words.append(line)
   else:
     break
 
+x = ten_common_words[[0]:0:10]
+print(x)
+
+# plt.plot(x, y, label="test")
