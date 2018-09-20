@@ -4,12 +4,16 @@
 import nlp30
 import collections
 
-lines = nlp30.neko_lines()
-words = []
-for line in lines:
-  for morpheme in line:
-    words.append(morpheme['surface'])
+def line_common_words():
+  lines = nlp30.neko_lines()
+  words = []
+  for line in lines:
+    for morpheme in line:
+      words.append(morpheme['surface'])
 
-word_count = collections.Counter(words)
+  word_count = collections.Counter(words)
 
-print(word_count.most_common())
+  common_words = word_count.most_common()
+
+  yield common_words
+
