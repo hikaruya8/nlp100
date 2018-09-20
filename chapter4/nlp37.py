@@ -14,7 +14,8 @@ for i, line in enumerate(line_common_words):
   else:
     break
 
-x = ten_common_words[[0]:0:10]
-print(x)
+x = np.array(ten_common_words)[0:,0]
+y = np.array(ten_common_words)[0:,1]
 
-# plt.plot(x, y, label="test")
+plt.plot(x, y, label="test")
+
