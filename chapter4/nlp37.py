@@ -4,6 +4,7 @@
 import nlp36
 import matplotlib.pyplot as plt
 import numpy as np
+plt.rcParams['font.family'] = 'AppleGothic'
 
 line_common_words = nlp36.line_common_words()
 
@@ -17,6 +18,9 @@ for i, line in enumerate(line_common_words):
 x = np.array(ten_common_words)[0:,0]
 y = np.array(ten_common_words)[0:,1]
 
-plt.bar(x, y, label="test")
+plt.title = '出現頻度'
+
+plt.bar(x, y)
+plt.legend()
 plt.show()
 
