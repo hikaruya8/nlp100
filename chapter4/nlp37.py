@@ -15,10 +15,15 @@ for i, line in enumerate(line_common_words):
   else:
     break
 
-x = np.array(ten_common_words)[0:,0]
-y = np.array(ten_common_words)[0:,1]
 
-plt.title = '出現頻度'
+x, y = map(list, zip(*ten_common_words))
+print(x)
+print(y)
+
+plt.bar(x, y, tick_label=x, align="center")
+
+# x = np.array(ten_common_words)[0:,0]
+# y = np.array(ten_common_words)[0:,1]
 
 plt.bar(x, y)
 plt.legend()
