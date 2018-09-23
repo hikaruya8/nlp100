@@ -16,16 +16,13 @@ for i, line in enumerate(line_common_words):
     break
 
 
-x, y = map(list, zip(*ten_common_words))
+# x, y = map(list, zip(*ten_common_words))
+x = np.array(ten_common_words)[0:,0]
+y = np.array(ten_common_words)[0:,1]
 print(x)
 print(y)
 
-plt.bar(x, y, tick_label=x, align="center")
+plt.bar(range(len(x)), y, tick_label=x, align="center")
 
-# x = np.array(ten_common_words)[0:,0]
-# y = np.array(ten_common_words)[0:,1]
-
-plt.bar(x, y)
-plt.legend()
 plt.show()
 
