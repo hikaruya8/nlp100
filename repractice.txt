@@ -6,3 +6,4 @@
 - nlp34
 - nlp35
 - nlp37~39 降順になればいけるはず　ValueError: `bins` must increase monotonically, when an array
+- n;p40
