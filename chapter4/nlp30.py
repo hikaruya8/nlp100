@@ -51,11 +51,10 @@ def neko_lines():
         morphemes = []
 
 # 形態素解析
-if __name__ == "parse_neko":
+if __name__ == "__main__":
   parse_neko()
 
 # 1文ずつ辞書のリストを作成
-if __name__ == "__neko_lines__":
   lines = neko_lines()
   for line in lines:
       print(line)
