@@ -17,7 +17,9 @@ def relate_neko():
     for line in data_file:
       out_file.write(cabocha.parse(line).toString(CaboCha.FORMAT_LATTICE))
 
-def relate_lines():
+# def relate_lines():
+  
+
   
 # 形態素解析
 relate_neko()
