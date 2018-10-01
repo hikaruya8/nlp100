@@ -74,7 +74,7 @@ def relate_lines():
 
 
 if __name__ == '__main__':
-  # 形態素解析
+  # 係り受け解析
   relate_neko()
 
   # 1文ずつリスト作成
