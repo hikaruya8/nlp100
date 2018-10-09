@@ -84,13 +84,13 @@ def neko_lines():
   raise StopIteration
 
 
-  # if __name__ == '__main__':
-nlp40.relate_neko()
+if __name__ == '__main__':
+  nlp40.relate_neko()
 
-  # 1文ずつリスト作成
-for i, chunks in enumerate(neko_lines(), 1):
-  # 8文目を表示
-  if i == 8:
-    for j, chunk in enumerate(chunks):
-        print('[{}]{}'.format(j, chunk))
-    break
+    # 1文ずつリスト作成
+  for i, chunks in enumerate(neko_lines(), 1):
+    # 8文目を表示
+    if i == 8:
+      for j, chunk in enumerate(chunks):
+          print('[{}]{}'.format(j, chunk))
+      break
