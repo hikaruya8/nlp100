@@ -5,14 +5,19 @@ import nlp40
 import nlp41
 from nlp41 import Chunk
 
+#nlp41のChunkクラスに関数normalized_surface()を追加
+
 nlp40.relate_neko()
 # 1文ずつリスト作成
-for i, chunks in enumerate(nlp41.neko_lines(), 1):
-# 8文目を表示
-    if i == 8:
-        for j, chunk in enumerate(chunks):
-            print('[{}]{}'.format(j, chunk))
-        break
+for chunks in nlp41.neko_lines():
+    for chunk in chunks:
+        if chunk.dst != -1:
+            src = chunk.normalized_surface()
+            dst = chunks[chunk.dst].normalized_surface()
+            if src != '' and dst != '':
+                print('{}\t{}'.format(src, dst))
+
+
 
 
 #係り先文節インデックス番号（dst），係り元文節インデックス番号のリスト（srcs）を使う

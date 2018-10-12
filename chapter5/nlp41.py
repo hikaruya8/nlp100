@@ -25,6 +25,16 @@ class Chunk:
         surface += morph.surface
     return '{}\tsrcs{}\tdst[{}]'.format(surface, self.srcs, self.dst)
 
+  def normalized_surface(self):
+      #句読点などの記号を出力しないようにする
+      result = ''
+      for morph in self.morphs:
+          if morph in self.morphs:
+              if morph.pos != '記号':
+                  result += morph.surface
+              return result
+
+
 def neko_lines():
   # 「吾輩は猫である」の係り受け解析結果のジェネレータ
   # 「吾輩は猫である」の係り受け解析結果を順次読み込んで、
