@@ -4,5 +4,10 @@
 import nlp40
 import nlp41
 
-def extract_relation():
-  
+dst = nlp41.Chunk.self.dst
+srcs = nlp41.Chunk.srcs
+#係り先文節インデックス番号（dst），係り元文節インデックス番号のリスト（srcs）を使う
+# def extract_relation(dst, srcs):
+
+
+
