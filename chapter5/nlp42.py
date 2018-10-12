@@ -3,11 +3,19 @@
 
 import nlp40
 import nlp41
+from nlp41 import Chunk
 
-dst = nlp41.Chunk.self.dst
-srcs = nlp41.Chunk.srcs
+if __name__ == '__main__':
+  nlp40.relate_neko()
+
+    # 1文ずつリスト作成
+  for i, chunks in enumerate(nlp41.neko_lines(), 1):
+    # 8文目を表示
+    if i == 8:
+      for j, chunk in enumerate(chunks):
+          print('[{}]{}'.format(j, chunk))
+      break
+
+
 #係り先文節インデックス番号（dst），係り元文節インデックス番号のリスト（srcs）を使う
 # def extract_relation(dst, srcs):
-
-
-
