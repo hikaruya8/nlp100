@@ -21,5 +21,6 @@ if __name__ == '__main__':
 
 
 
+
 #係り先文節インデックス番号（dst），係り元文節インデックス番号のリスト（srcs）を使う
 # def extract_relation(dst, srcs):
