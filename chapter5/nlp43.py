@@ -9,7 +9,7 @@ nlp40.relate_neko()
 for chunks in nlp41.neko_lines():
   for chunk in chunks:
     if chunk.dst != -1:
-      #かかり元に名詞があるか、かかり先に同士があるかチェック
+      #かかり元に名詞があるか、係り先に動詞があるかチェック
         if chunk.chk_pos('名詞') and chunks[chunk.dst].chk_pos('名詞'):
           src = chunk.normalized_surface()
           dst = chunks[chunk.dst].normalized_surface()
