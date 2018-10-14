@@ -6,12 +6,12 @@ import nlp41
 from nlp41 import Chunk
 import nlp42
 
-nlp40.realte_neko()
+nlp40.relate_neko()
 
 for chunks in nlp41.neko_lines():
   for chunk in chunks:
     if chunk.dst != -1:
-      src = chunk.nlp42.normalized_surface()
+      src = chunk.normalized_surface()
       dst = chunks[chunk.dst].normalized_surface()
-      if src = != '' and dst != '':
+      if src != '' and dst != '' and nlp40.morphs[pos] == '名詞':
         print('{}\t{}'.format(src, dst))
