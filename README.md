@@ -1,3 +1,6 @@
+git管理をクライントで管理するのからターミナル操作でするようにしたら、git cloneできなくなってしまったので、続きをこちらにしました。
+https://github.com/hikaruya8/nlp100_next
+
 # Natural Language Processing 100 questions
 
 Practice Natural Language Processing by 100 questions of Naoaki Okazaki, Inui-Okazaki Laboratory in Tohoku University (http://www.cl.ecei.tohoku.ac.jp/).
